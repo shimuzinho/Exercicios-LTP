@@ -1,17 +1,24 @@
-function acessandoElemento () {
-  let id = document.querySelector(".class-desejada").value
-  let saida = document.getElementById("saida")
+let array = []
 
+function mostrarElemento () {
+  let entrada = document.querySelector(".entrada-indice").value
+  let saida = document.getElementById("saida")
   try {
-    elementoValido(id)
-    saida.textContent = "Elemento encontrado."
+    saida.textContent = acharElemento(array, entrada)
   } catch (error){
     saida.textContent = `Erro: ${error.message}`
   }
 }
 
-function elementoValido (num) {
-  if (document.getElementById(num) == null) {
-    throw new Error("Elemento inexistente.")
+function adicionarElemento () {
+  let entradaElemento = document.querySelector(".entrada-array")
+  array.push(entradaElemento.value)
+  entradaElemento.value = ""
+}
+
+function acharElemento (a, b) {
+  if (a[b] == undefined || a[b] == "") {
+    throw new Error ("Não existe elemento com esse índice ou elemento vazio.")
   }
+  return a[b]
 }
