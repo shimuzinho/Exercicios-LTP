@@ -5,11 +5,9 @@ let pessoa = {
   "altura": 1.75,
   "idade": 16,
   "dataNascimento": "26/12/2007",
-  "endereco": {
-    "bairro": "Centro",
-    "rua": "Levino Lopes da Silva",
-    "numero": 1923
-  }
+  "bairro": "Centro",
+  "rua": "Levino Lopes da Silva",
+  "numero": 1923
 }
 
 function procurarValor() {
